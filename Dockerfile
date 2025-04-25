@@ -18,4 +18,4 @@ FROM alpine:latest
 WORKDIR /root/
 COPY --from=backend /usr/src/app/dist/taskcafe .
 EXPOSE 3333
-CMD ["./taskcafe", "web", "--bind", "0.0.0.0:3333"]
+CMD ["./taskcafe", "web","--migrate", "--bind", "0.0.0.0:3333"]
